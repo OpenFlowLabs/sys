@@ -192,9 +192,9 @@ solaris_amd64)
 	;;
 illumos_amd64)
         mksyscall="go run mksyscall_solaris.go"
-	mkerrors=
-	mksysnum=
-	mktypes=
+	mkerrors="$mkerrors -Wall -Werror -m64"
+	mksysnum=     #"go run mksysnum.go /usr/include/sys/syscall.h"
+	mktypes="GOARCH=$GOARCH go tool cgo -godefs"
 	;;
 *)
 	echo 'unrecognized $GOOS_$GOARCH: ' "$GOOSARCH" 1>&2

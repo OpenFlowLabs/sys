@@ -34,6 +34,12 @@ if [[ "$GOOS" = "solaris" ]]; then
 	export PATH=/usr/gnu/bin:$PATH
 fi
 
+if [[ "$GOOS" = "illumos" ]]; then
+        # Assumes GNU versions of utilities in PATH.
+        CC=gcc
+        export PATH=/usr/gnu/bin:$PATH
+fi
+
 uname=$(uname)
 
 includes_AIX='
