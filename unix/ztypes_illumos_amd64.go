@@ -5,35 +5,6 @@
 
 package unix
 
-type Stat_t struct {
-	Dev     uint64
-	Ino     uint64
-	Mode    uint32
-	Nlink   uint32
-	Uid     uint32
-	Gid     uint32
-	Rdev    uint64
-	Size    int64
-	Atim    Timespec
-	Mtim    Timespec
-	Ctim    Timespec
-	Blksize int32
-	Blocks  int64
-	Fstype  [16]int8
-}
-
-type Statfs_t struct{}
-
-type Timespec struct {
-	Sec  int64
-	Nsec int64
-}
-
-type Timeval struct {
-	Sec  int64
-	Usec int64
-}
-
 const MNT_RDONLY = 0x1
 const MNT_FSS = 0x2
 const MNT_DATA = 0x4

@@ -192,8 +192,8 @@ solaris_amd64)
 	;;
 illumos_amd64)
         mksyscall="go run mksyscall_solaris.go"
-	mkerrors="$mkerrors -Wall -Werror -m64"
-	mksysnum=     #"go run mksysnum.go /usr/include/sys/syscall.h"
+	mkerrors=
+	mksysnum=
 	mktypes="GOARCH=$GOARCH go tool cgo -godefs"
 	;;
 *)
