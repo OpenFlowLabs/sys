@@ -1,6 +1,5 @@
-package unix
-
 // +build ignore
+package unix
 
 /*
 Input to cgo -godefs.  See README.md
